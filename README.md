@@ -26,15 +26,16 @@ A sleek, modern Task Management System built using **React**, **Vite**, and **Fi
 | [React Router](https://reactrouter.com/) | Routing and Navigation             |
 | [CSS Modules](https://github.com/css-modules/css-modules) | Component-level Styling           |
 
----
 
+---
 ## 🖼️ UI Preview
 
 | Signup/Login | Task Manager (List View) | Task Manager (Table View) |
 |--------------|--------------------------|----------------------------|
-| ![Login](./assets/login.png) | ![List](./assets/list-view.png) | ![Table](./assets/table-view.png) |
+| ![Login](src/assets/login.png) | ![List](src/assets/list-view.png) | ![Table](src/assets/table-view.png) |
 
 ---
+
 
 ## ✨ Folder Structure
 src/
@@ -88,4 +89,5 @@ Showcasing Firebase + React capabilities
 
 ## 📫 Contact
 Madhu Kuncham
-🔗 LinkedIn
+🔗 [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/madhukuncham/)
+
