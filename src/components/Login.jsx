@@ -1,9 +1,8 @@
 // src/components/Login.jsx
-history
 import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/firebase";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link} from "react-router-dom";
 import styles from './Login.module.css';
 
 const Login = () => {
@@ -25,11 +24,11 @@ const Login = () => {
 
   return (
   
-  <div className={styles.container}>
-    <h2 className={styles.heading}>Login</h2>
-    <form onSubmit={handleLogin}>
+  <div className={styles.spcontainer}>
+    <h2 className={styles.spheading}>Login</h2>
+    <form className={styles.spform}onSubmit={handleLogin}>
       <input
-        className={styles.input}
+        className={styles.spinput}
         type="email"
         placeholder="Email"
         value={email}
@@ -37,16 +36,22 @@ const Login = () => {
         required
       />
       <input
-        className={styles.input}
+        className={styles.spinput}
         type="password"
         placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         required
       />
-      <button className={styles.button} type="submit">Sign Up</button>
+      <button className={styles.spbutton} type="submit">LogIn</button>
+       <p style={{ marginTop: "1rem", textAlign: "center" }}>
+        Don't have an account?{" "}
+        <Link to="/signup" style={{ color: "#007bff", textDecoration: "underline" }}>
+        Sign up here
+       </Link>
+      </p>
     </form>
-    {error && <p className={styles.error}>{error}</p>}
+    {error && <p className={styles.sperror}>{error}</p>}
   </div>
 );
 };

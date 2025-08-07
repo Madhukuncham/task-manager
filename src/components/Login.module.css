@@ -1,40 +1,63 @@
 /* Login.module.css */
-.container {
+.spcontainer {
   max-width: 400px;
-  margin: auto;
-  padding: 20px;
+  width: 100%;
+  margin: 5% auto;
+  padding: 30px 25px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  background: #f9f9f9;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background:  #f4f6f8;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
 
-.heading {
+.spheading {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  font-size: 24px;
   color: #333;
 }
 
-.input {
+/* 👇 Add this to stack inputs vertically */
+.spform {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.spinput {
   width: 100%;
-  padding: 10px;
-  margin: 8px 0;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
   box-sizing: border-box;
 }
 
-.button {
+.spbutton {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   background-color: #007bff;
   border: none;
   color: white;
+  font-size: 16px;
   font-weight: bold;
   cursor: pointer;
   border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
-.error {
+.spbutton:hover {
+  background-color: #0056b3;
+}
+
+.sperror {
   color: red;
-  margin-top: 10px;
   text-align: center;
+}
+
+/* Optional: Signup link styling */
+.spsignup-link {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
 }

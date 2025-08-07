@@ -10,8 +10,8 @@ function App() {
     <AuthProvider>
     <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Signup />} />
-          <Route path="/Login" element={<Login />} />
+           <Route path="/" element={<Login />} />
+          <Route path="/Signup" element={<Signup />} />
           <Route path="/tasks" element={<Tasks />} />
         </Routes>
     </BrowserRouter>
