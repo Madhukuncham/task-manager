@@ -2,16 +2,20 @@ import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
+import Tasks from "./components/Tasks"; // You’ll create this later
+import { AuthProvider } from './AuthContext'
 
 function App() {
   return (
+    <AuthProvider>
     <BrowserRouter>
-      <Routes>
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/" element={<Login />} />
-        {/* Add your tasks route here */}
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Signup />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/tasks" element={<Tasks />} />
+        </Routes>
     </BrowserRouter>
+    </AuthProvider>
   );
 }
 

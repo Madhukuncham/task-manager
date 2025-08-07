@@ -1,8 +1,8 @@
-// src/components/Signup.jsx
 import React, { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase";
+import { auth } from "../firebase/firebase";
 import { useNavigate } from "react-router-dom";
+import styles from './Signup.module.css'; // ✅ CSS Module
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -22,10 +22,11 @@ const Signup = () => {
   };
 
   return (
-    <div>
-      <h2>Sign Up</h2>
+    <div className={styles.container}>
+      <h2 className={styles.heading}>Sign Up</h2>
       <form onSubmit={handleSignup}>
         <input
+          className={styles.input}
           type="email"
           placeholder="Email"
           value={email}
@@ -33,15 +34,16 @@ const Signup = () => {
           onChange={(e) => setEmail(e.target.value)}
         /><br />
         <input
+          className={styles.input}
           type="password"
-          placeholder="Password"
+          placeholder="Set Password"
           value={password}
           required
           onChange={(e) => setPassword(e.target.value)}
         /><br />
-        <button type="submit">Sign Up</button>
+        <button className={styles.button} type="submit">Sign Up</button>
       </form>
-      {error && <p style={{color:"red"}}>{error}</p>}
+      {error && <p style={{ color: "red" }}>{error}</p>}
     </div>
   );
 };

@@ -1,15 +1,12 @@
-// src/AuthContext.jsx
 import { createContext, useContext, useEffect, useState } from "react";
 import {
-  getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
   onAuthStateChanged,
 } from "firebase/auth";
-import app from "./firebase";
+import { auth } from "./firebase/firebase"; // ✅ FIXED
 
-const auth = getAuth(app);
 const AuthContext = createContext();
 
 export const useAuth = () => useContext(AuthContext);
